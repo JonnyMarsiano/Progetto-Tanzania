@@ -13,8 +13,8 @@ function App() {
         <PTheader />
       </Row>
 
-      <Router>
 
+      <Router>
         <Routes>
           <Route exact path="/" element={
             <Row>

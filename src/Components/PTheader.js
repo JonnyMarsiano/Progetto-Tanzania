@@ -22,7 +22,7 @@ function PTheader(props) {
                 </Container>
             </Navbar>
 
-            { hideSidebar ? <PTsidebar /> : "" }
+            { hideSidebar ? "" : <PTsidebar /> }
         </>
     );
 }
