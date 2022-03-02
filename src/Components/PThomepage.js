@@ -5,7 +5,7 @@ function PThomepage(props) {
     return (
         <Container>
             <Row>
-                <PTheader />
+                
             </Row>
         </Container>
     );
