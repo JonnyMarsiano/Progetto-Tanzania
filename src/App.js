@@ -4,6 +4,7 @@ import { Row, Container } from "react-bootstrap";
 import PTheader from './Components/PTheader';
 import PThomepage from './Components/PThomepage';
 import PTchisiamo from './Components/PTchisiamo';
+import PTvillaggi from './Components/PTvillaggi';
 
 function App() {
   return (
@@ -24,6 +25,11 @@ function App() {
           <Route path="/chisiamo" element={
             <Row>
               <PTchisiamo />
+            </Row>
+          } />
+          <Route path="/villaggi" element={
+            <Row>
+              <PTvillaggi />
             </Row>
           } />
         </Routes>

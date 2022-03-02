@@ -25,6 +25,7 @@ function PTheader(props) {
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.3">Villaggio3</NavDropdown.Item>
                         </NavDropdown>
+                        <Nav.Link href="/villaggi">La mappa</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
