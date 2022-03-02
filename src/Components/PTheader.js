@@ -1,16 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, NavDropdown, Container, Nav } from "react-bootstrap";
-import { Router, Route, Switch, Link } from "react-router-dom";
 import logo from '../Images/Logo.jpg'
-import PThomepage from './PThomepage';
-import PTchisiamo from './PTchisiamo';
 
 function PTheader(props) {
     return (
         <Navbar bg="success" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
-                    <img className="logo" src={logo} />
+                    <img className="logo" src={logo} alt="" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

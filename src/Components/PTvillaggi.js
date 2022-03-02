@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { Row, Col, Container, Modal, Button } from "react-bootstrap";
 import ModalImage from "react-modal-image";
 import map from '../Images/Mappa.jpg'
