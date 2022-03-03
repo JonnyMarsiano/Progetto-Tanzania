@@ -31,10 +31,48 @@ body {
   height: 650px;
 }
 
+.hiddenButtonContainer {
+  position: relative;
+  width: 50%;
+}
+
+.hiddenButtonContainer .hiddenButton {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: transparent;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.hiddenButtonKitisi {
+  top: 35%;
+  left: 140%;
+}
+
+.hiddenButtonKisilwa {
+  top: 90%;
+  left: 10%;
+}
+
 .villageTitle {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 1rem;
+}
+
+.galleryTitle {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.frontImage {
+  margin-bottom: 3rem;
 }
 
 .image {

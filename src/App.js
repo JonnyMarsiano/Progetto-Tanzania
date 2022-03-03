@@ -4,7 +4,9 @@ import { Row, Container } from "react-bootstrap";
 import PTheader from './Components/PTheader';
 import PThomepage from './Components/PThomepage';
 import PTchisiamo from './Components/PTchisiamo';
-import PTvillaggi from './Components/PTvillaggi';
+import PTmap from './Components/PTmap';
+import PTKitisi from './Components/PTKitisi';
+import PTKisilwa from './Components/PTKisilwa';
 
 function App() {
   return (
@@ -13,7 +15,6 @@ function App() {
       <Row>
         <PTheader />
       </Row>
-
 
       <Router>
         <Routes>
@@ -29,7 +30,17 @@ function App() {
           } />
           <Route path="/villaggi" element={
             <Row>
-              <PTvillaggi />
+              <PTmap />
+            </Row>
+          } />
+          <Route path="/kitisi" element={
+            <Row>
+              <PTKitisi />
+            </Row>
+          } />
+          <Route path="/kisilwa" element={
+            <Row>
+              <PTKisilwa />
             </Row>
           } />
         </Routes>

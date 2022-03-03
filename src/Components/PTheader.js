@@ -16,11 +16,9 @@ function PTheader(props) {
                         <Nav.Link href="/chisiamo">Chi siamo</Nav.Link>
                         <Nav.Link href="#link">I volti del progetto</Nav.Link>
                         <NavDropdown title="I luoghi del progetto" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Villaggio1</NavDropdown.Item>
+                            <NavDropdown.Item href="/kitisi">Kitisi</NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.2">Villaggio2</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.3">Villaggio3</NavDropdown.Item>
+                            <NavDropdown.Item href="/kisilwa">Kisilwa</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="/villaggi">La mappa</Nav.Link>
                     </Nav>
