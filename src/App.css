@@ -31,11 +31,25 @@ body {
   height: 650px;
 }
 
+.villageTitle {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
 .image {
-  padding-top: 8rem;
-  padding-bottom: 3rem;
-  width: 200px;
-  height: 350px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+}
+
+.villageImage {
+  justify-content: center;
 }
 
 .photoDescription {
