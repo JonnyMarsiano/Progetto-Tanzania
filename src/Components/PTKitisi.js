@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Row, Col, Container, Modal, Button, OverlayTrigger, Popover } from "react-bootstrap";
-import ModalImage from "react-modal-image";
+import { Row, Col, Container } from "react-bootstrap";
+import { Link } from "react-router-dom"
 import Kitisi1 from '../Images/Kitisi/Kitisi 1.JPG'
 import Kitisi2 from '../Images/Kitisi/Kitisi 2.jpg'
 import Kitisi3 from '../Images/Kitisi/Kitisi 3.jpg'
@@ -12,13 +11,6 @@ import Kitisi7 from '../Images/Kitisi/Kitisi 7.JPG'
 
 function PTKitisi(props) {
 
-    const [showGalleryKitisi, setShowGalleryKitisi] = useState(false);
-    const handleCloseGalleryKitisi = () => setShowGalleryKitisi(false);
-    const [galleryKitisi, setGalleryKitisi] = useState({
-        index: 0,
-        picList: [Kitisi1, Kitisi2, Kitisi3, Kitisi4, Kitisi5, Kitisi6, Kitisi7]
-    })
-
     const descriptionsKitisi = [
         "Bambini che giocano, al nostro arrivo a Kitisi",
         "Accoglienza bambini",
@@ -29,36 +21,6 @@ function PTKitisi(props) {
         "Chiesa di Kitisi"
     ];
 
-    const handleShowGalleryKitisi = (i) => {
-        setGalleryKitisi(prev => {
-            return { index: i, picList: prev.picList }
-        });
-        setShowGalleryKitisi(true);
-    };
-    const onClickNextKitisi = () => {
-        if (galleryKitisi.index + 1 === galleryKitisi.picList.length) {
-            setGalleryKitisi(prev => {
-                return { index: 0, picList: prev.picList }
-            })
-        } else {
-            setGalleryKitisi(prev => {
-                return { index: prev.index + 1, picList: prev.picList }
-            })
-        }
-    }
-    const onClickPreviousKitisi = () => {
-        if (galleryKitisi.index - 1 === -1) {
-            setGalleryKitisi(prev => {
-                return { index: prev.picList.length - 1, picList: prev.picList }
-            })
-        } else {
-            setGalleryKitisi(prev => {
-                return { index: prev.index - 1, picList: prev.picList }
-            })
-        }
-    }
-
-
     return (
         <>
             {/*IMMAGINI KITISI*/}
@@ -66,55 +28,104 @@ function PTKitisi(props) {
                 <Row>
                     <h1 className="villageTitle">Kitisi</h1>
                 </Row>
-                <Row>
-                    <img className="image frontImage" onClick={() => handleShowGalleryKitisi(3)} src={Kitisi4} alt="" />
-                </Row>
-            </Container>
-            <Container>
+                <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(3)}>
+                    <Row>
+                        <img className="image frontImage" onClick={props.setPhotoToShow(4)} src={Kitisi4} alt="" />
+                    </Row>
+                </Link>
                 <Row>
                     <h3 className="galleryTitle">Le foto del villaggio</h3>
                 </Row>
-                <Row>
-                    <Col></Col>
-                    <Col xs={8}>
-                        <img className="image" onClick={() => handleShowGalleryKitisi(0)} src={Kitisi1} alt="" />
-                        <img className="image" onClick={() => handleShowGalleryKitisi(1)} src={Kitisi2} alt="" />
-                        <img className="image" onClick={() => handleShowGalleryKitisi(2)} src={Kitisi3} alt="" />
-                    </Col>
-                    <Col></Col>
-                </Row>
-                <Row>
-                    <Col></Col>
-                    <Col xs={8}>
-                        <img className="image" onClick={() => handleShowGalleryKitisi(3)} src={Kitisi4} alt="" />
-                        <img className="image" onClick={() => handleShowGalleryKitisi(4)} src={Kitisi5} alt="" />
-                        <img className="image" onClick={() => handleShowGalleryKitisi(5)} src={Kitisi6} alt="" />
-                    </Col>
-                    <Col></Col>
-                </Row>
-                <Row>
-                    <Col></Col>
-                    <Col xs={8}>
-                        <img className="image" onClick={() => handleShowGalleryKitisi(6)} src={Kitisi7} alt="" />
-                    </Col>
-                    <Col></Col>
-                </Row>
             </Container>
 
-            {/*GALLERIA KITISI*/}
-            <Modal show={showGalleryKitisi} onHide={handleCloseGalleryKitisi}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Kitisi</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <ModalImage small={galleryKitisi.picList[galleryKitisi.index]} />
-                    <div className="photoDescription"><span>{descriptionsKitisi[galleryKitisi.index]}</span></div>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button className="indietroButton" variant="success" onClick={onClickPreviousKitisi}> indietro </Button>
-                    <Button classname="avantiButton" variant="success" onClick={onClickNextKitisi}> Avanti </Button>
-                </Modal.Footer>
-            </Modal>
+            <Container>
+                <Row className="framedImage">
+                    <Col>
+                        <div className="frame">
+                            <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(0)}>
+                                <Row>
+                                    <img className="image" src={Kitisi1} alt="" />
+                                </Row>
+                            </Link>
+                            <Row className="multi-line"><div className="photoDescription">{descriptionsKitisi[0]}</div></Row>
+                        </div>
+
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="frame">
+                            <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(1)}>
+                                <Row>
+                                    <img className="image" src={Kitisi2} alt="" />
+                                </Row>
+                            </Link>
+                            <Row className="multi-line"><div className="photoDescription">{descriptionsKitisi[1]}</div></Row>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="frame">
+                            <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(2)}>
+                                <Row>
+                                    <img className="image" src={Kitisi3} alt="" />
+                                </Row>
+                            </Link>
+                            <Row className="multi-line"><div className="photoDescription">{descriptionsKitisi[2]}</div></Row>
+                        </div>
+
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="frame">
+                            <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(3)}>
+                                <Row>
+                                    <img className="image" src={Kitisi4} alt="" />
+                                </Row>
+                            </Link>
+                            <Row className="multi-line"><div className="photoDescription">{descriptionsKitisi[3]}</div></Row>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="frame">
+                            <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(4)}>
+                                <Row>
+                                    <img className="image" src={Kitisi5} alt="" />
+                                </Row>
+                            </Link>
+                            <Row className="multi-line"><div className="photoDescription">{descriptionsKitisi[4]}</div></Row>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="frame">
+                            <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(5)}>
+                                <Row>
+                                    <img className="image" src={Kitisi6} alt="" />
+                                </Row>
+                            </Link>
+                            <Row className="multi-line"><div className="photoDescription">{descriptionsKitisi[5]}</div></Row>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="frame">
+                            <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(6)}>
+                                <Row>
+                                    <img className="image" src={Kitisi7} alt="" />
+                                </Row>
+                            </Link>
+                            <Row className="multi-line"><div className="photoDescription">{descriptionsKitisi[6]}</div></Row>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </>
     );
 }

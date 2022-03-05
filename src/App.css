@@ -1,3 +1,5 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
 .App {
   width: 100vw;
   height: 100vh;
@@ -75,15 +77,41 @@ body {
   margin-bottom: 3rem;
 }
 
+.frame {
+  background-color: #F0F2DD;
+  border-image: none;
+  border-radius: 30px 30px 30px 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50%;
+}
+
+.multi-line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
 .image {
   margin-top: 1rem;
   margin-right: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 5px;
-  width: 250px;
-  max-width: 100%;
+  border-radius: 30px 30px 30px 30px;
+  width: 100%;
+  max-width: 300px;
   height: auto;
+}
+
+.gallery {
+  background-color: black;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.galleryButton {
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
 }
 
 .villageImage {
@@ -91,8 +119,8 @@ body {
 }
 
 .photoDescription {
-  padding-top: 1rem;
-  text-align: center;
+  margin-left: 1rem;
+  text-align: start;
 }
 
 .indietroButton {
