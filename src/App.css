@@ -26,16 +26,25 @@ body {
   height: 450px;
 }
 
+.paragraph {
+  padding-bottom: 3rem;
+}
+
 .map {
   padding-top: 8rem;
   padding-bottom: 3rem;
-  width: 500px;
-  height: 650px;
+  width: 100%;
+  height: auto;
+  flex:1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .hiddenButtonContainer {
   position: relative;
   width: 50%;
+  text-align: center;
 }
 
 .hiddenButtonContainer .hiddenButton {
@@ -46,19 +55,18 @@ body {
   font-size: 16px;
   padding: 12px 24px;
   border: none;
-  cursor: pointer;
   border-radius: 5px;
-  background-color: transparent;
+  /*background-color: transparent;*/
 }
 
 .hiddenButtonKitisi {
-  top: 35%;
-  left: 140%;
+  top: 120%;
+  left: 120%;
 }
 
 .hiddenButtonKisilwa {
   top: 90%;
-  left: 10%;
+  left: 55%;
 }
 
 .villageTitle {
