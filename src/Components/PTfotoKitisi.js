@@ -24,31 +24,37 @@ function PTfotoKitisi(props) {
         {
             original: Kitisi1,
             originalHeight: 5000,
-            description: "Bambini che giocano, al nostro arrivo a Kitisi"
+            description: descriptionsKitisi[0]
         },
         {
             original: Kitisi2,
-            originalHeight: 5000
+            originalHeight: 5000,
+            description: descriptionsKitisi[1]
         },
         {
             original: Kitisi3,
-            originalHeight: 5000
+            originalHeight: 5000,
+            description: descriptionsKitisi[2]
         },
         {
             original: Kitisi4,
-            originalHeight: 5000
+            originalHeight: 5000,
+            description: descriptionsKitisi[3]
         },
         {
             original: Kitisi5,
-            originalHeight: 5000
+            originalHeight: 5000,
+            description: descriptionsKitisi[4]
         },
         {
             original: Kitisi6,
-            originalHeight: 5000
+            originalHeight: 5000,
+            description: descriptionsKitisi[5]
         },
         {
             original: Kitisi7,
-            originalHeight: 6000
+            originalHeight: 6000,
+            description: descriptionsKitisi[6]
         }
     ];
 
