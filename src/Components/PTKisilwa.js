@@ -41,6 +41,11 @@ function PTKisilwa(props) {
                         <img className="image frontImage" onClick={props.setPhotoToShow(4)} src={Kisilwa2} alt="" />
                     </Row>
                 </Link>
+                <div className="photoDescription">
+                    <p>O prima o dentro la savana più crudele, laddove si perdevano le piste e il fiume curva silente, di leopardi risaputi e di lucciole insonni, lo stridore è delle iene e i canti delle mamme, gli alberi abbattuti dal pascolo degli elefanti e la scarsa dimestichezza con la curiosità viaggiante degli wazungu, la salita e le risaie, fumo dagli sterpi e il formicolio d'indomiti bambini tra sterrati buoni per una palla di pezza e l'ombra profumata dei mango.</p>
+                    <p>Il Progetto Tanzania - supportato dalla Hakuna Matata Onlus - ha costruito una piccola scuola elementare: i minuscoli studenti, fino ad allora, erano costretti a percorrere circa 6 miglia verso Mahuninga, incamminandosi al buio, per poter frequentare. Alcuni di loro però, negli anni, non vi sono mai arrivati, preda degli animali o vittime delle piene del fiume.</p>
+                    <p>E allora una corsa contro il tempo, organizzare piccoli eventi e soprattutto pubblicare i "Quaderni tanzani", in pochi mesi le aule hanno iniziato a essere tracciate, delineate, messe su pietra su pietra, e poi piste sicure, e poi strade battute, e la luce fin quasi lassù, dove la savana inizia ma non fa più quella paura.</p>
+                </div>
                 <Row>
                     <h3 className="galleryTitle">Le foto del villaggio</h3>
                 </Row>
