@@ -32,42 +32,47 @@ body {
 
 .map {
   padding-top: 8rem;
-  padding-bottom: 3rem;
-  width: 100%;
+  width: 120%;
   height: auto;
   flex:1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.hiddenButtonContainer {
   position: relative;
-  width: 50%;
-  text-align: center;
+  left: 12%;
 }
 
-.hiddenButtonContainer .hiddenButton {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  color: transparent;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 5px;
-  /*background-color: transparent;*/
+@media only screen and (max-width: 600px) {
+  
+  .hiddenButtonContainer {
+    position: relative;
+    width: 85%;
+    right: 11%;
+  }
+  
+  .hiddenButton {
+    position: absolute;
+    transform: translate(50%, 50%);
+    color: transparent;
+    font-size: 2px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  
+  .hiddenButtonKitisi {
+    top: 38%;
+    left: 81%;
+  }
+
+  .hiddenButtonKisilwa {
+    left: 4%;
+    top: 90%;
+  }
 }
 
-.hiddenButtonKitisi {
-  top: 120%;
-  left: 120%;
-}
 
-.hiddenButtonKisilwa {
-  top: 90%;
-  left: 55%;
-}
+
+
+
 
 .villageTitle {
   text-align: center;

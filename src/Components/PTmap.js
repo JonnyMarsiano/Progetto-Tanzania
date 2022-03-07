@@ -30,10 +30,10 @@ function PTvillaggi(props) {
                     <Col>
                         <div class="hiddenButtonContainer">
                             <img className="map" src={map} alt="" />
-                            <OverlayTrigger trigger={"click"} placement="right" overlay={popoverKitisi}>
+                            <OverlayTrigger trigger={"click"} placement="left" overlay={popoverKitisi}>
                                 <button class="hiddenButton hiddenButtonKitisi">JM</button>
                             </OverlayTrigger>
-                            <OverlayTrigger trigger={"click"} placement="left" overlay={popoverKisilwa}>
+                            <OverlayTrigger trigger={"click"} placement="right" overlay={popoverKisilwa}>
                                 <button class="hiddenButton hiddenButtonKisilwa">JM</button>
                             </OverlayTrigger>
                         </div>

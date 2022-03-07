@@ -69,7 +69,7 @@ function PTfotoKitisi(props) {
                     showFullscreenButton={false}
                     useBrowserFullscreen={false}
                 />
-                <Link to="/kisilwa"><AiOutlineClose className="galleryButton" size="40px" color="white"/></Link>
+                <Link to="/kitisi"><AiOutlineClose className="galleryButton" size="40px" color="white"/></Link>
             </div>
         </>
     );

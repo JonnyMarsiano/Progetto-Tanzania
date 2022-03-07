@@ -9,7 +9,7 @@ import PTmap from './Components/PTmap';
 import PTKitisi from './Components/PTKitisi';
 import PTfotoKitisi from './Components/PTfotoKitisi';
 import PTKisilwa from './Components/PTKisilwa';
-import PTfotoKisilwa from './Components/PTfotoKitisi';
+import PTfotoKisilwa from './Components/PTfotoKisilwa';
 
 function App() {
 
