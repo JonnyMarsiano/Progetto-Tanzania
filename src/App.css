@@ -69,10 +69,35 @@ body {
   }
 }
 
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
+  
+  .hiddenButtonContainer {
+    position: relative;
+    width:60%;
+    left: 8%;
+  }
+  
+  .hiddenButton {
+    position: absolute;
+    transform: translate(50%, 50%);
+    color: transparent;
+    font-size: 14px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  
+  .hiddenButtonKitisi {
+    top: 30%;
+    left: 89%;
+  }
 
-
-
-
+  .hiddenButtonKisilwa {
+    left: 8.5%;
+    top: 91%;
+  }
+}
 
 .villageTitle {
   text-align: center;
