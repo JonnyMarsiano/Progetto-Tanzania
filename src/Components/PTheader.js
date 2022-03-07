@@ -15,7 +15,7 @@ function PTheader(props) {
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/chisiamo">Chi siamo</Nav.Link>
                         <Nav.Link href="#link">I volti del progetto</Nav.Link>
-                        <NavDropdown title="I luoghi del progetto" id="basic-nav-dropdown">
+                        <NavDropdown title="I luoghi del progetto" id="basic-nav-dropdown" className="dropdown">
                             <NavDropdown.Item href="/kitisi">Kitisi</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/kisilwa">Kisilwa</NavDropdown.Item>

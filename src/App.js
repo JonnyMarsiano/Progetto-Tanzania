@@ -10,6 +10,7 @@ import PTKitisi from './Components/PTKitisi';
 import PTfotoKitisi from './Components/PTfotoKitisi';
 import PTKisilwa from './Components/PTKisilwa';
 import PTfotoKisilwa from './Components/PTfotoKisilwa';
+import PTfooter from './Components/PTfooter';
 
 function App() {
 
@@ -27,6 +28,9 @@ function App() {
               <Row>
                 <PThomepage />
               </Row>
+              <Row>
+                <PTfooter />
+              </Row>
             </>
           } />
           <Route path="/chisiamo" element={
@@ -35,6 +39,9 @@ function App() {
             </Row>
               <Row>
                 <PTchisiamo />
+              </Row>
+              <Row>
+                <PTfooter />
               </Row>
             </>
           } />
@@ -45,6 +52,9 @@ function App() {
               <Row>
                 <PTmap />
               </Row>
+              <Row>
+                <PTfooter />
+              </Row>
             </>
           } />
           <Route path="/kitisi" element={
@@ -52,27 +62,33 @@ function App() {
               <PTheader />
             </Row>
               <Row>
-                <PTKitisi setPhotoToShow={setPhotoToShow}/>
+                <PTKitisi setPhotoToShow={setPhotoToShow} />
+              </Row>
+              <Row>
+                <PTfooter />
               </Row>
             </>
           } />
           <Route path="/kitisi/gallery" element={
             <Row>
-              <PTfotoKitisi photoToShow={photoToShow}/>
+              <PTfotoKitisi photoToShow={photoToShow} />
             </Row>
           } />
           <Route path="/kisilwa" element={
             <><Row>
-              <PTheader />
-            </Row>
+                <PTheader />
+              </Row>
               <Row>
-                <PTKisilwa setPhotoToShow={setPhotoToShow}/>
+                <PTKisilwa setPhotoToShow={setPhotoToShow} />
+              </Row>
+              <Row>
+                <PTfooter />
               </Row>
             </>
           } />
           <Route path="/kisilwa/gallery" element={
             <Row>
-              <PTfotoKisilwa photoToShow={photoToShow}/>
+              <PTfotoKisilwa photoToShow={photoToShow} />
             </Row>
           } />
         </Routes>

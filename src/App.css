@@ -14,6 +14,17 @@ body {
   height: 6%;
 }
 
+.dropdown {
+  outline: none;
+  box-shadow: none;
+}
+
+.homeText {
+  padding-top: 5rem;
+  text-align: center;
+  font-style: italic;
+}
+
 .logo {
   height: 55px;
   width: 55x; 
@@ -82,33 +93,38 @@ body {
     transform: translate(50%, 50%);
     color: transparent;
     font-size: 14px;
-    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     background-color: transparent;
   }
   
   .hiddenButtonKitisi {
-    top: 30%;
+    padding: 12px 20px;
+    top: 28%;
     left: 89%;
   }
 
   .hiddenButtonKisilwa {
+    padding: 12px 24px;
     left: 8.5%;
     top: 91%;
   }
 }
 
+.popover {
+  background-color: #C4ED68;
+}
+
 .villageTitle {
+  font-family: "URW Chancery L, cursive";
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
 }
 
 .galleryTitle {
   text-align: center;
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  padding-top: 7rem; 
 }
 
 .frontImage {
@@ -123,11 +139,32 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 0.5rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
   width: 50%;
   position: relative;
   top: 10%;
   left: 25%
+}
+
+.differentFrame {
+  margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .frame {
+    background-color: #F0F2DD;
+    border-image: none;
+    border-radius: 30px 30px 30px 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    width: 70%;
+    position: relative;
+    top: 10%;
+    left: 15%
+  }
 }
 
 .multi-line {
@@ -159,6 +196,10 @@ body {
 
 .villageImage {
   justify-content: center;
+}
+
+.villageDescription {
+  text-align: start;
 }
 
 .photoDescription {

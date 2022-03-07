@@ -26,7 +26,7 @@ function PTKitisi(props) {
             {/*IMMAGINI KITISI*/}
             <Container>
                 <Row>
-                    <h1 className="villageTitle">Kitisi</h1>
+                    <h1 className="villageTitle"><b>Kitisi</b></h1>
                 </Row>
                 <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(3)}>
                     <Row>
@@ -34,7 +34,7 @@ function PTKitisi(props) {
                     </Row>
                 </Link>
                 <Row className="multi-line">
-                    <div className="photoDescription">
+                    <div className="villageDescription">
                         <p>E' magia d'argilla, è passaggio di giraffe e avamposto dei bracconieri, è granaio e cammino angusto, luogo che scorre come i serpenti nella stagione secca, luce di miele al tramonto e ambra d'alba, palude delle piogge e polvere di vento. Il ritrovo di grandi e piccoli sotto la chioma spinosa della grande acacia. La chiesa di Baba ha un campanile cerchione-di-camion e un confessionale baobab, e poi un viavai curioso a sorvegliarla.</p>
                         <p>Il Progetto Tanzania si è impegnato a fare arrivare la luce elettrica in questa parte della missione fuori dal percorso principale, pagando al Governo tanzano le spese delle pratiche di elettrificazione e nel contempo contribuendo a fare installare un contatore centrale in un locale adiacente alla chiesa. Adesso tocca al Governo dare la luce tanto attesa. Polepole.</p>
                         <p>Uno dei nostri sogni è quello di sistemare alcune aule, in questo momento pericolanti, della piccola scuola elementare. Nel frattempo, le giraffe continuano timidamente a reiterare il loro passaggio, e i bambini hanno le divise rosse: come l'argilla bagnata.</p>
@@ -98,7 +98,7 @@ function PTKitisi(props) {
                 </Row>
                 <Row>
                     <Col>
-                        <div className="frame">
+                        <div className="frame differentFrame">
                             <Link to="/kitisi/gallery" onClick={() => props.setPhotoToShow(4)}>
                                 <Row>
                                     <img className="image" src={Kitisi5} alt="" />

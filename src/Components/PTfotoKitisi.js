@@ -12,6 +12,7 @@ import Kitisi7 from '../Images/Kitisi/Kitisi 7.JPG'
 function PTfotoKitisi(props) {
     
     const descriptionsKitisi = [
+        "Bambini che giocano, al nostro arrivo a Kitisi",
         "Accoglienza bambini",
         "Scorcio del villaggio di Kitisi al tramonto",
         "Grande acacia all’ingresso di Kitisi, funge anche da stazione bus",

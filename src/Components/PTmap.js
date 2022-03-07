@@ -6,7 +6,7 @@ import map from '../Images/Mappa.jpg'
 function PTvillaggi(props) {
 
     const popoverKitisi = (
-        <Popover id="popover-basic">
+        <Popover id="popover-basic popover">
             <Popover.Header as="h3">Villaggio di Kitisi</Popover.Header>
             <Popover.Body>
                 <Link to="/kitisi">Viaggia nel villaggio</Link>
@@ -15,10 +15,10 @@ function PTvillaggi(props) {
     );
 
     const popoverKisilwa = (
-        <Popover id="popover-basic">
+        <Popover id="popover-basic popover">
             <Popover.Header as="h3">Villaggio di Kisilwa</Popover.Header>
             <Popover.Body>
-                <Link to="/kitisi">Viaggia nel villaggio</Link>
+                <Link to="/kisilwa">Viaggia nel villaggio</Link>
             </Popover.Body>
         </Popover>
     );
