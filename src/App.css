@@ -14,6 +14,10 @@ body {
   height: 6%;
 }
 
+.navbar {
+  background-color: #18B637;
+}
+
 .dropdown {
   outline: none;
   box-shadow: none;
@@ -42,73 +46,8 @@ body {
 }
 
 .map {
-  padding-top: 8rem;
-  width: 120%;
-  height: auto;
-  flex:1;
-  position: relative;
-  left: 12%;
-}
-
-@media only screen and (max-width: 600px) {
-  
-  .hiddenButtonContainer {
-    position: relative;
-    width: 85%;
-    right: 11%;
-  }
-  
-  .hiddenButton {
-    position: absolute;
-    transform: translate(50%, 50%);
-    color: transparent;
-    font-size: 2px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: transparent;
-  }
-  
-  .hiddenButtonKitisi {
-    top: 38%;
-    left: 81%;
-  }
-
-  .hiddenButtonKisilwa {
-    left: 4%;
-    top: 90%;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 1280px) {
-  
-  .hiddenButtonContainer {
-    position: relative;
-    width:60%;
-    left: 8%;
-  }
-  
-  .hiddenButton {
-    position: absolute;
-    transform: translate(50%, 50%);
-    color: transparent;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    background-color: transparent;
-  }
-  
-  .hiddenButtonKitisi {
-    padding: 12px 20px;
-    top: 28%;
-    left: 89%;
-  }
-
-  .hiddenButtonKisilwa {
-    padding: 12px 24px;
-    left: 8.5%;
-    top: 91%;
-  }
+  padding-top: 100px;
+  text-align: center;
 }
 
 .popover {

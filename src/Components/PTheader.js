@@ -4,7 +4,7 @@ import logo from '../Images/Logo.jpg'
 
 function PTheader(props) {
     return (
-        <Navbar bg="success" expand="lg">
+        <Navbar className="navbar" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
                     <img className="logo" src={logo} alt="" />
