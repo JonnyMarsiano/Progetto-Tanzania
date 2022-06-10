@@ -1,6 +1,9 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import ImageGallery from 'react-image-gallery';
+import React, { useState, useCallback } from "react";
+import { render } from "react-dom";
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
 import Kisilwa1 from '../Images/Kisilwa/Kisilwa 1.JPG'
 import Kisilwa2 from '../Images/Kisilwa/Kisilwa 2.JPG'
 import Kisilwa3 from '../Images/Kisilwa/Kisilwa 3.jpg'
@@ -14,7 +17,68 @@ import Kisilwa10 from '../Images/Kisilwa/Kisilwa 10.jpg'
 import Kisilwa11 from '../Images/Kisilwa/Kisilwa 11.jpg'
 
 function PTfotoKisilwa(props) {
-    
+
+    const [currentImage, setCurrentImage] = useState(0);
+    const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+    const openLightbox = useCallback((event, { photo, index }) => {
+        setCurrentImage(index);
+        setViewerIsOpen(true);
+    }, []);
+
+    const closeLightbox = () => {
+        setCurrentImage(0);
+        setViewerIsOpen(false);
+    };
+
+    const photos = [
+        {
+            src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+            width: 4,
+            height: 3
+        },
+        {
+            src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+            width: 1,
+            height: 1
+        },
+        {
+            src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
+            width: 3,
+            height: 4
+        },
+        {
+            src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
+            width: 3,
+            height: 4
+        },
+        {
+            src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
+            width: 3,
+            height: 4
+        },
+        {
+            src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+            width: 4,
+            height: 3
+        },
+        {
+            src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+            width: 3,
+            height: 4
+        },
+        {
+            src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+            width: 4,
+            height: 3
+        },
+        {
+            src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+            width: 4,
+            height: 3
+        }
+    ];
+
     const descriptionsKisilwa = [
         "Accoglienza al villaggio di Kisilwa",
         "Accoglienza",
@@ -29,78 +93,24 @@ function PTfotoKisilwa(props) {
         "Festa per l’inaugurazione delle nuove aule"
     ];
 
-    const images = [
-        {
-            original: Kisilwa1,
-            originalHeight: 5000,
-            description: descriptionsKisilwa[0]
-        },
-        {
-            original: Kisilwa2,
-            originalHeight: 5000,
-            description: descriptionsKisilwa[1]
-        },
-        {
-            original: Kisilwa3,
-            originalHeight: 5000,
-            description: descriptionsKisilwa[2]
-        },
-        {
-            original: Kisilwa4,
-            originalHeight: 5000,
-            description: descriptionsKisilwa[3]
-        },
-        {
-            original: Kisilwa5,
-            originalHeight: 5000,
-            description: descriptionsKisilwa[4]
-        },
-        {
-            original: Kisilwa6,
-            originalHeight: 5000,
-            description: descriptionsKisilwa[5]
-        },
-        {
-            original: Kisilwa7,
-            originalHeight: 6000,
-            description: descriptionsKisilwa[6]
-        },
-        {
-            original: Kisilwa8,
-            originalHeight: 6000,
-            description: descriptionsKisilwa[7]
-        },
-        {
-            original: Kisilwa9,
-            originalHeight: 6000,
-            description: descriptionsKisilwa[8]
-        },
-        {
-            original: Kisilwa10,
-            originalHeight: 6000,
-            description: descriptionsKisilwa[9]
-        },
-        {
-            original: Kisilwa11,
-            originalHeight: 6000,
-            description: descriptionsKisilwa[10]
-        }
-    ];
-
     return (
-        <>
-            <div className="gallery">
-                <ImageGallery
-                    items={images}
-                    startIndex={props.photoToShow}
-                    showPlayButton={false}
-                    showBullets={true}
-                    showFullscreenButton={false}
-                    useBrowserFullscreen={false}
-                />
-                <Link to="/kisilwa"><AiOutlineClose className="galleryButton" size="40px" color="white"/></Link>
-            </div>
-        </>
+        <div>
+            <Gallery photos={photos} onClick={openLightbox} />
+            <ModalGateway>
+                {viewerIsOpen ? (
+                    <Modal onClose={closeLightbox}>
+                        <Carousel
+                            currentIndex={currentImage}
+                            views={photos.map(x => ({
+                                ...x,
+                                srcset: x.srcSet,
+                                caption: x.title
+                            }))}
+                        />
+                    </Modal>
+                ) : null}
+            </ModalGateway>
+        </div>
     );
 }
 
